@@ -45,6 +45,7 @@ spec:
     canary:
       canaryService: argo-combined-app-canary
       stableService: argo-combined-app
+      dynamicStableScale: true
       trafficRouting:
         istio:
           virtualService:
