@@ -1,8 +1,8 @@
 
 #!/bin/bash
-for (( c=1; c<=30s; c++ ))
+for (( c=1; c<=120; c++ ))
 do  
    curl http://argo-combined-app.$BASE_HOST/
    echo $c
-   sleep 5
+   sleep 2
 done
