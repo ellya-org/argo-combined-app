@@ -91,12 +91,12 @@ spec:
               reporter="source",
               destination_service=~"{{args.service-name}}",
               response_code=~"2.*"
-            }[2m]
+            }[5m]
           )) / sum(irate(
             istio_requests_total{
               reporter="source",
               destination_service=~"{{args.service-name}}"
-            }[2m]
+            }[5m]
           ))
   - name: avg-req-duration
     interval: 10s
@@ -111,12 +111,12 @@ spec:
             istio_request_duration_milliseconds_sum{
               reporter="source",
               destination_service=~"{{args.service-name}}"
-            }[2m]
+            }[5m]
           )) / sum(irate(
             istio_request_duration_milliseconds_count{
               reporter="source",
               destination_service=~"{{args.service-name}}"
-            }[2m]
+            }[5m]
           ))
       
 ---
