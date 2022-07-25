@@ -8,6 +8,7 @@ spec:
   selector:
     matchLabels:
       app: argo-combined-app
+  revisionHistoryLimit: 3
   template:
     metadata:
       labels:
