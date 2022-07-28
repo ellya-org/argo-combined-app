@@ -4,6 +4,7 @@ metadata:
   name: argo-combined-app
   labels:
     app: argo-combined-app
+  resourceVersion: "1"
 spec:
   gateways:
   - argo-combined-app
