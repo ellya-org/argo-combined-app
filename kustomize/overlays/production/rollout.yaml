@@ -85,7 +85,7 @@ spec:
     failureLimit: 3
     provider:
       prometheus:
-        address: http://prometheus-server.monitoring
+        address: http://prometheus-server.observability
         query: |
           sum(irate(
             istio_requests_total{  
@@ -106,7 +106,7 @@ spec:
     failureLimit: 3
     provider:
       prometheus:
-        address: http://prometheus-server.monitoring
+        address: http://prometheus-server.observability
         query: |
           sum(irate(
             istio_request_duration_milliseconds_sum{
